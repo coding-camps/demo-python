@@ -1,0 +1,2 @@
+Python 循环列表删除元素的注意事项
+http://wu.run/2020/11/11/python-traversal-delete-needing-attention/
