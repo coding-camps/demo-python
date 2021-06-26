@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.orm import sessionmaker
 
 from common.orm_base import BaseModel
+from common.db_config import DbConfig
 
 
 class DbUtils(object):
@@ -24,6 +25,7 @@ class DbUtils(object):
             self.session.close()
 
     def read_all(self):
+        url = DbConfig().get_url()
         self.engine = create_engine(url, echo=True, future=True)
         with Session(self.engine) as session:
             return session.query(self.model).all()

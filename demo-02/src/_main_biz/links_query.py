@@ -7,7 +7,7 @@ from common.db_config import DbConfig
 from common.orm_models import Link
 
 if __name__ == '__main__':
-
+    print("hello world")
     url = DbConfig().get_url()
 
     engine = create_engine(url, echo=True, future=True)
